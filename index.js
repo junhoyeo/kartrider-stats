@@ -12,11 +12,12 @@ module.exports = async function (nickname) {
   const $ = cheerio.load(await page.property('content'));
 
   let stat = []
-  $('div.stats').find('div.speed').each(function() {
+  const names = ['빠름', '매우빠름', '무한부스터']
+  $('div.stats').find('div.speed').each(function(idx, _) {
     // console.log($.html(elem))
     stat.push({
-      summary: $(this).find('.summary').text().trim(),
-
+      name: names[idx],
+      summary: $(this).find('.summary').text().trim()
     })
   });
 
