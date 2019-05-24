@@ -1,6 +1,6 @@
 {
   "name": "kartrider-stats",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "retrieve user katrider status from Kartrider TMI",
   "main": "index.js",
   "scripts": {
